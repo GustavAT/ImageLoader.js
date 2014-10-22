@@ -22,6 +22,7 @@ loader.onReady(function() {
 });
 loader.startQueue(images);
 ```
+Note: You can also register multiple callbacks using onReady().
 
 Once loading has finished you can use get() function to access your images:
 ```javascript
