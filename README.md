@@ -14,9 +14,9 @@ var images = [
 ];
 ```
 
-Get a new ImageLoader instance, register a callback and start the queue:
+Create a new ImageLoader instance, register a callback and start the queue:
 ```javascript
-var loader = ImageLoader.getInstance();
+var loader = new ImageLoader();
 loader.onReady(function() {
   // loading finished, do something useful here
 });
