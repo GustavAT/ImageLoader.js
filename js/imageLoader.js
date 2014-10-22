@@ -1,7 +1,7 @@
 /**
  * The MIT License (MIT)
  * Copyright (c) 2014 Andreas Tscheinig
- * See LICENSE file in ImageLoaderJS repository for the full text of license.
+ * See LICENSE file in ImageLoader.js repository for the full text of license.
  */
 ImageLoader = (function() {
 	/* private members */
