@@ -1,7 +1,9 @@
 ImageLoaderJS
 =============
 
-A simple script that loads images and invokes a callback when finished loading.
+A simple script that loads images and invokes a callback when loading has finished.
+
+[>> JSFiddle Demo](http://jsfiddle.net/49nmg4ae/)
 
 ###Usage
 Specify an array of resources: key and url to the image
