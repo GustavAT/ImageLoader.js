@@ -26,7 +26,7 @@ Note: You can also register multiple callbacks using onReady().
 
 Once loading has finished you can use get() function to access your images:
 ```javascript
-var image = loader.get("kitten01");
+var image = loader.get("kitten01").image;
 if (image) {
   // image loaded successfully, do something useful here
 } else {
