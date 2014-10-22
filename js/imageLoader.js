@@ -4,7 +4,7 @@
  * See LICENSE file in ImageLoaderJS repository for the full text of license.
  */
 ImageLoader = (function() {
-	var loader;
+	var loader = null;
 
 	var ImageLoader = (function() {
 		/* private members */
@@ -155,6 +155,13 @@ ImageLoader = (function() {
 				loader = new ImageLoader();
 			};
 			return loader;
+		},
+
+		/**
+		 * Destroys the loader instance
+		 */
+		destroy: function() {
+			loader = null;
 		}
 	}
 })();
