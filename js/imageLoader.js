@@ -115,7 +115,7 @@ ImageLoader = (function() {
 		 * Load the given items.
 		 * @param {Array.<object>|object} items A single image or an array of images to load. A resource must have a key and an url property {key: string, url: string}
 		 */
-		imageLoader.prototype.load = function(items) {
+		imageLoader.prototype.startQueue = function(items) {
 			if (items instanceof Array) {
 				for (var i = 0; i < items.length; i++) {
 					load(items[i]);
