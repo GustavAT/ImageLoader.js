@@ -21,10 +21,13 @@ ImageLoader = (function() {
 
 	/**
 	 * An image loader
+	 * @param {Array.<function>|function} callbacks Callbacks to be registered
 	 * @constructor
 	 * @private
 	 */
-	var imageLoader = function() {};
+	var imageLoader = function(callbacks) {
+		this.onReady(callbacks);
+	};
 
 	/* private methods */
 
@@ -123,11 +126,15 @@ ImageLoader = (function() {
 	};
 
 	/**
-	 * Register a callback that will be invoked when all resources have been loaded.
-	 * @param {function} callback A callback to be registered
+	 * Register callbacks that will be invoked when all resources have been loaded.
+	 * @param {Array.<function>|function} callbacks_ Callbacks to be registered
 	 */
-	imageLoader.prototype.onReady = function(callback) {
-		callbacks.push(callback);
+	imageLoader.prototype.onReady = function(callbacks_) {
+		if (callbacks_ instanceof Array) {
+			callbacks = callbacks.concat(callbacks_);
+		} else if (typeof callbacks_ === "function") {
+			callbacks.push(callbacks_);
+		}
 	};
 
 	/**
