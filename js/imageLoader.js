@@ -21,9 +21,9 @@ ImageLoader = (function() {
 
 	/**
 	 * An image loader
-		 * @constructor
-		 * @private
-		 */
+	 * @constructor
+	 * @private
+	 */
 	var imageLoader = function() {};
 
 	/* private methods */
