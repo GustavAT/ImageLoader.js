@@ -18,7 +18,7 @@ var loader = ImageLoader.getInstance();
 loader.onReady(function() {
   // loading finished, do something useful here
 });
-loader.load(images);
+loader.startQueue(images);
 ```
 
 Once loading has finished you can use get() function to access your images:
