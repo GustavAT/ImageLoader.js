@@ -6,7 +6,7 @@ A simple script that loads images and invokes a callback when loading has finish
 [>> JSFiddle Demo](http://jsfiddle.net/49nmg4ae/)
 
 ###Usage
-Specify an array of resources: key and url to the image
+Specify an array of resources: key and image-url
 ```javascript
 var images = [
   { key: "kitten01", url: "http://placekitten.com/g/200/300" },
@@ -22,14 +22,25 @@ loader.onReady(function() {
 });
 loader.startQueue(images);
 ```
-Note: You can also register multiple callbacks using onReady().
+Note: You can also register multiple callbacks!
 
-Once loading has finished you can use get() function to access your images:
+Use get() to access your images. The object you get looks like this:
 ```javascript
-var image = loader.get("kitten01").image;
-if (image) {
+{
+  key: string,
+  ready: boolean,
+  image: Image
+}
+```
+The ready-property is set to true if the image has been processed.
+
+The image-property is set to null if an error occured during loading an image (i.e. the image was not found).
+```javascript
+var resource = loader.get("kitten01");
+if (resource.ready && resource.image) {
   // image loaded successfully, do something useful here
 } else {
   // error loading image
 }
 ```
+Note: If you call get() after loading (i.e. in your callback) you don't need to check the ready flag)!
