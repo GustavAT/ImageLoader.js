@@ -5,6 +5,8 @@ A simple script that loads images and invokes a callback when loading has finish
 
 [>> JSFiddle Demo](http://jsfiddle.net/jzsw43j5/)
 
+**JSFiddle Demos currently only working on firefox**
+
 ###Usage
 Specify an array of resources: key and image-url
 ```javascript
