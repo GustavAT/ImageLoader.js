@@ -3,7 +3,8 @@ ImageLoader.js
 
 A simple script to load images and invoke callbacks after loading has finished.
 
-NOt working
+Not working
+
 [>> JSFiddle Demo](http://jsfiddle.net/jzsw43j5/)
 
 **JSFiddle Demos currently only working on firefox**
